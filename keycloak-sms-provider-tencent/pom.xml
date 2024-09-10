@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <artifactId>keycloak-phone-provider-parent</artifactId>
-    <groupId>cc.coopersoft</groupId>
+    <groupId>cn.greentracks</groupId>
     <version>2.3.4-RELEASE</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -14,7 +14,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>cc.coopersoft</groupId>
+      <groupId>cn.greentracks</groupId>
       <artifactId>keycloak-phone-provider</artifactId>
       <version>2.3.4-RELEASE</version>
       <scope>provided</scope>
