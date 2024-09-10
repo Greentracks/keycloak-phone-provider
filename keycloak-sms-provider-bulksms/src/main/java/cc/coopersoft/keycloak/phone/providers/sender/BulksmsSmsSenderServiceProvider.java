@@ -2,12 +2,10 @@ package cc.coopersoft.keycloak.phone.providers.sender;
 
 import cc.coopersoft.keycloak.phone.providers.exception.MessageSendException;
 import cc.coopersoft.keycloak.phone.providers.spi.FullSmsSenderAbstractService;
-import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.jboss.logging.Logger;
+import org.keycloak.Config.Scope;
 import org.keycloak.broker.provider.util.SimpleHttp;
 import org.keycloak.models.KeycloakSession;
-import org.keycloak.Config.Scope;
 
 import java.io.IOException;
 
@@ -59,10 +57,9 @@ public class BulksmsSmsSenderServiceProvider extends FullSmsSenderAbstractServic
 
     @Override
     public void sendMessage(String phoneNumber, String message) throws MessageSendException {
-        HttpClient httpclient = HttpClients.createDefault();
-        SimpleHttp req = SimpleHttp.doPost(url, httpclient);
-        req.json(new BulksmsMessage[] {
-                new BulksmsMessage(this.from, phoneNumber, message, this.encoding, this.routingGroup) });
+        SimpleHttp req = SimpleHttp.doPost(url, this.session);
+        req.json(new BulksmsMessage[]{
+                new BulksmsMessage(this.from, phoneNumber, message, this.encoding, this.routingGroup)});
         req.authBasic(this.username, this.password);
         try {
             SimpleHttp.Response res = req.asResponse();

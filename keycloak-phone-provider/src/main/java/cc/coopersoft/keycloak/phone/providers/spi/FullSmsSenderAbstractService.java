@@ -17,9 +17,9 @@ import org.keycloak.theme.Theme;
 public abstract class FullSmsSenderAbstractService implements MessageSenderService {
     private static final Logger logger = Logger.getLogger(FullSmsSenderAbstractService.class);
 
-    private final String realmDisplay;
+    protected final String realmDisplay;
 
-    private final KeycloakSession session;
+    protected final KeycloakSession session;
 
     @Deprecated
     public FullSmsSenderAbstractService(String realmDisplay) {
