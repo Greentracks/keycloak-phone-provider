@@ -11,7 +11,7 @@
 
     <name>keycloak-phone-provider</name>
     <description>keycloak phone support.</description>
-    <url>https://github.com/cooperlyt/keycloak-phone-provider</url>
+    <url>https://github.com/GreenfieldTrail/keycloak-phone-provider</url>
 
     <licenses>
         <license>
@@ -23,17 +23,17 @@
 
     <scm>
         <tag>${project.version}</tag>
-        <connection>scm:git@github.com:cooperlyt/keycloak-phone-provider.git</connection>
-        <developerConnection>scm:git@github.com:cooperlyt/keycloak-phone-provider.git</developerConnection>
-        <url>https://github.com/cooperlyt/keycloak-phone-provider</url>
+        <connection>scm:git@github.com:GreenfieldTrail/keycloak-phone-provider.git</connection>
+        <developerConnection>scm:git@github.com:GreenfieldTrail/keycloak-phone-provider.git</developerConnection>
+        <url>https://github.com/GreenfieldTrail/keycloak-phone-provider</url>
     </scm>
 
     <developers>
         <developer>
-            <id>cooperlyt</id>
-            <name>cooper lee</name>
-            <email>lyt3131@163.com</email>
-            <organization>https://cooperlyt.github.io</organization>
+            <id>jacky</id>
+            <name>jacky yang</name>
+            <email>jacky850618@163.com</email>
+            <organization>https://www.greentracks.cn</organization>
             <timezone>+8</timezone>
             <roles>
                 <role>Developer</role>
@@ -54,7 +54,7 @@
         <repository>
             <id>github</id>
             <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/cooperlyt/keycloak-phone-provider</url>
+            <url>https://maven.pkg.github.com/GreenfieldTrail/keycloak-phone-provider</url>
         </repository>
     </distributionManagement>
 

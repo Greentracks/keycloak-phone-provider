@@ -38,8 +38,11 @@ This is what you can do for now:
 
 ## Features
 
+### New in Version 2.3.4
++ Update Keycloak from 21 to 25
+
 ### New in Version 2.3.3
-+ Add `Condition - phone provided` [#46](https://github.com/cooperlyt/keycloak-phone-provider/issues/46)
++ Add `Condition - phone provided` [#46](https://github.com/GreenfieldTrail/keycloak-phone-provider/issues/46)
 
 ### New in Version 2.3.2
 + fix phone login form display error!
@@ -48,7 +51,7 @@ This is what you can do for now:
 + Canonicalize phone numbers using [Google's libphonenumbers](https://github.com/google/libphonenumber) 
 + Valid phone number using [Google's libphonenumbers](https://github.com/google/libphonenumber)
 + Cli param `number-regx` rename to `number-regex`, and match regex at after canonicalize phone number
-+ Fixed Bug [#40 OTP Cookie bypass](https://github.com/cooperlyt/keycloak-phone-provider/issues/40)
++ Fixed Bug [#40 OTP Cookie bypass](https://github.com/GreenfieldTrail/keycloak-phone-provider/issues/40)
 + Remove OTP setting `Cookie Max Age` and add cli param otp-expires
 + Refactor OTP , only use Credential's phone number (The certificate's phone number comes from Required action `Configure OTP over SMS` or setting `Create OTP Credential` in user registration  ), Regardless of the user's phone number
 + Cli param `hour-maximum` rename to `target-hour-maximum`
@@ -60,7 +63,7 @@ Migration:
     
 
 ### New in Version 2.2.2
-+ fix phone number as username bug [#24](https://github.com/cooperlyt/keycloak-phone-provider/issues/24)
++ fix phone number as username bug [#24](https://github.com/GreenfieldTrail/keycloak-phone-provider/issues/24)
 
 
 
@@ -74,8 +77,8 @@ anymore and I did not test user storage beyond Kerberos or LDAP. I may try to he
 ### **Installing:**
 
 + Docker
-  1. docker image is [coopersoft/keycloak:21.0.2_phone-2.3.3](https://hub.docker.com/repository/docker/coopersoft/keycloak)
-  2. for examples  [docker-compose.yml](https://raw.githubusercontent.com/cooper-lyt/keycloak-phone-provider/master/examples/docker-compose.yml)
+  1. docker image is [GreenfieldTrail/keycloak:25.0.4_phone-2.3.4](https://hub.docker.com/repository/docker/GreenfieldTrail/keycloak)
+  2. for examples  [docker-compose.yml](https://raw.githubusercontent.com/GreenfieldTrail/keycloak-phone-provider/master/examples/docker-compose.yml)
   3. run as `docker-compose up` , [docker-compose](https://docs.docker.com/compose/) is required!
 
 If you want to build the project, simply run  `examples/docker-build.sh` after cloning the repository.
@@ -172,7 +175,7 @@ Tip:
   If Realm parameter `Email as username` is true, then config `Phone number as username` and `hide email` is invalid!  
   If parameter `duplicate-phone` is true then `Phone number as username` is invalid!
 
-![Registration with phone](https://github.com/cooper-lyt/keycloak-phone-provider/raw/master/examples/document/a0.png)
+![Registration with phone](https://github.com/GreenfieldTrail/keycloak-phone-provider/raw/master/examples/document/a0.png)
 
 
 Registration URL:
@@ -191,7 +194,7 @@ Set Login Theme as `phone`
 Set Bind `Browser with phone` to `Browser flow`
 On the `Authentication` page, bind `Browser with phone` to `Browser flow`
 
-![Login By phone](https://github.com/cooper-lyt/keycloak-phone-provider/raw/master/examples/document/e0.jpg)
+![Login By phone](https://github.com/GreenfieldTrail/keycloak-phone-provider/raw/master/examples/document/e0.jpg)
 
 
 ### **2FA by Phone OTP**
@@ -205,7 +208,7 @@ On the `Authentication` page, bind `Browser with phone` to `Browser flow`
 
 
 
-![OTP](https://github.com/cooper-lyt/keycloak-phone-provider/raw/master/examples/document/b0.jpg)
+![OTP](https://github.com/GreenfieldTrail/keycloak-phone-provider/raw/master/examples/document/b0.jpg)
 
 ### **Only use phone login or get Access token use endpoints:**
 
@@ -219,12 +222,12 @@ Under `Authentication` > `Flows`:
 Under `Clients` > `$YOUR_CLIENT` > `Advanced ` > `Authentication Flow Overrides`
 Bind `Direct Grant Flow` to `Direct grant with phone`
 
-![Setting](https://github.com/cooper-lyt/keycloak-phone-provider/raw/master/examples/document/c0.jpg)
+![Setting](https://github.com/GreenfieldTrail/keycloak-phone-provider/raw/master/examples/document/c0.jpg)
 
 Either Phone/Otp or Username/Password :
-![Setting](https://github.com/cooper-lyt/keycloak-phone-provider/raw/master/examples/document/f0.png)
+![Setting](https://github.com/GreenfieldTrail/keycloak-phone-provider/raw/master/examples/document/f0.png)
 
-[Android client example](https://github.com/cooperlyt/KeycloakPhoneClient)
+[Android client example](https://github.com/GreenfieldTrail/KeycloakPhoneClient)
 ### **Everybody phone number( if not exists create user by phone number) get Access token use endpoints:**
 
 Under `Authentication` > `Flows`:
@@ -265,7 +268,7 @@ Under `Authentication` > `Flows`:
 
 Set Bind `Reset credentials with phone` to `Reset credentials flow`
 
-![Authentication setting](https://github.com/cooper-lyt/keycloak-phone-provider/raw/master/examples/document/d0.jpg)
+![Authentication setting](https://github.com/GreenfieldTrail/keycloak-phone-provider/raw/master/examples/document/d0.jpg)
 
 ## **Conditional**
  `Condition - phone provided` 
