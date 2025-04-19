@@ -21,12 +21,12 @@
         </license>
     </licenses>
 
-    <scm>
-        <tag>${project.version}</tag>
-        <connection>scm:git@github.com:GreenfieldTrail/keycloak-phone-provider.git</connection>
-        <developerConnection>scm:git@github.com:GreenfieldTrail/keycloak-phone-provider.git</developerConnection>
-        <url>https://github.com/GreenfieldTrail/keycloak-phone-provider</url>
-    </scm>
+<!--    <scm>-->
+<!--        <tag>${project.version}</tag>-->
+<!--        <connection>scm:git@github.com:GreenfieldTrail/keycloak-phone-provider.git</connection>-->
+<!--        <developerConnection>scm:git@github.com:GreenfieldTrail/keycloak-phone-provider.git</developerConnection>-->
+<!--        <url>https://github.com/GreenfieldTrail/keycloak-phone-provider</url>-->
+<!--    </scm>-->
 
     <developers>
         <developer>
@@ -49,14 +49,13 @@
         <version.keycloak>25.0.6</version.keycloak>
     </properties>
 
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/GreenfieldTrail/keycloak-phone-provider</url>
-        </repository>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>github</id>-->
+<!--            <name>GitHub OWNER Apache Maven Packages</name>-->
+<!--            <url>https://maven.pkg.github.com/GreenfieldTrail/keycloak-phone-provider</url>-->
+<!--        </repository>-->
+<!--    </distributionManagement>-->
 
     <modules>
         <module>keycloak-phone-provider</module>
